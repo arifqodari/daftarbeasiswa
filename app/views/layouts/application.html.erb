@@ -4,7 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "daftarbeasiswa.com" %></title>
+    <meta name="description" content="Informasi Beasiswa untuk Pelajar Indonesia" />
+    <meta name="keywords" content="daftarbeasiswa.com, beasiswa, S1" />
+    <meta name="author" content="daftarbeasiswa.com" />
+
+    <meta property="fb:admins" content="daftarbeasiswa.com" />
+    <meta property="og:title" content="daftarbeasiswa.com | <%= content_for?(:title) ? yield(:title) : "daftarbeasiswa.com" %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://daftarbeasiswa.com" />
+    <meta property="og:site_name" content="daftarbeasiswa.com" />
+    <meta property="og:description" content="<%= content_for?(:title) ? yield(:title) : "daftarbeasiswa.com" %>" />
+    <meta property="og:image" content="<%= image_path('graduation.jpg') %>" />
+
+    <title>daftarbeasiswa.com | <%= content_for?(:title) ? yield(:title) : "daftarbeasiswa.com" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= stylesheet_link_tag    "http://fonts.googleapis.com/css?family=Lobster" %>

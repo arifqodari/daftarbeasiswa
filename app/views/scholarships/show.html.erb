@@ -1,4 +1,4 @@
-<%- title "daftarbeasiswa.com | " + @scholarship.title %>
+<%- title "" + @scholarship.title %>
 
 <div class="inner-content">
   <h2><%= @scholarship.title %></h2>
@@ -50,6 +50,8 @@
       </div>
     </div>
   </div>
+
+  <%= render_shareable :turbolinks => true, :facebook => {:turbolinks => false}, :buttons=> ['twitter', 'facebook', 'google_plus'] %>
 
   <div class="scholarship-description">
     <%= @scholarship.description.html_safe %>
