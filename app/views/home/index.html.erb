@@ -1,0 +1,25 @@
+<%- title "daftarbeasiswa.com | Informasi Beasiswa untuk Pelajar Indonesia" %>
+
+<table class="scholarships">
+  <thead>
+    <tr>
+      <th width="5%"></th>
+      <th width="65%">Beasiswa</th>
+      <th width="20%">Batas Waktu</th>
+      <th width="15%">Kategori</th>
+      <th width="5%">Bagikan</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scholarships.each do |s| %>
+      <tr>
+        <td></td>
+        <td><%= link_to s.title, scholarship_path(s) %></td>
+        <td><%= show_deadline(s.closing_date) %></td>
+        <td><%= s.category %></td>
+        <td></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

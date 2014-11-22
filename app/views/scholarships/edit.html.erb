@@ -1,0 +1,53 @@
+<%- title "daftarbeasiswa.com | Edit | " + @scholarship.title %>
+
+<h2>Edit Data Beasiswa</h2>
+
+<%= form_for @scholarship do |f| %>
+  <div class="row">
+    <div class="small-12 columns">
+      <%= f.label :title, "Judul" %>
+      <%= f.text_field :title, placeholder: "Contoh: Beasiswa Kuliah S1 Gratis Sampai Lulus dari Pemerintah Indonesia" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 columns">
+      <%= f.label :description, "Deskripsi Beasiswa" %>
+      <%= f.text_area :description, rows: 25, id: "text-editor" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 columns select-date-wrapper">
+      <%= f.label :opening_date, "Tanggal Buka Beasiswa" %>
+        <%= f.date_select :opening_date, {order: [:day, :month, :year]}, class: "select-date" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 columns select-date-wrapper">
+      <%= f.label :closing_date, "Tanggal Tutup Beasiswa" %>
+        <%= f.date_select :closing_date, {order: [:day, :month, :year]}, class: "select-date" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-3 columns">
+      <%= f.label :category, "Kategori Beasiswa" %>
+      <%= f.select "category", [['Luar Negeri' ,'Luar Negeri'], ['Dalam Negeri', 'Dalam Negeri']] %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-2 columns">
+      <%= f.label :major, "Jenjang Beasiswa" %>
+      <%= f.select "major", [['S1' ,'S1'], ['S2', 'S2'], ['S3', 'S3']] %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-2 columns">
+    <%= f.submit "Edit Data", class: "button" %>
+    </div>
+  </div>
+<% end %>

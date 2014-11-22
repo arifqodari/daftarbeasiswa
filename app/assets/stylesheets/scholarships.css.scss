@@ -1,0 +1,55 @@
+// Place all the styles related to the scholarships controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// variable
+$padding-content: 1.5rem;
+
+select.select-date {
+  width: 10%;
+  margin-right: 10px;
+  float: left;
+}
+
+.select-date-wrapper{
+  select:first-of-type{
+    width: 7%;
+  }
+  select:nth-of-type(2){
+    width: 15%;
+  }
+  select:last-of-type{
+    margin-right: 0;
+  }
+}
+
+.inner-content {
+  border-top: solid 4px #4C798C;
+  border-bottom: solid 4px #4C798C;
+  background-color: #fff;
+  padding: $padding-content;
+
+  h2 {
+    font-size: 1.7rem;
+  }
+}
+
+.scholarship-meta {
+  border-top: solid 1px #ddd;
+  border-bottom: solid 1px #ddd;
+  padding: 1em 0;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+
+  h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  h4:last-of-type {
+    margin-bottom: 0;
+  }
+}

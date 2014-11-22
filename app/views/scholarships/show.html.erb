@@ -1,0 +1,63 @@
+<%- title "daftarbeasiswa.com | " + @scholarship.title %>
+
+<div class="inner-content">
+  <h2><%= @scholarship.title %></h2>
+
+  <div class="scholarship-meta">
+    <div class="row">
+      <div class="small-6 columns">
+        <div class="row">
+          <div class="small-4 columns">
+            <h4>Tanggal Buka</h4>
+          </div>
+
+          <div class="small-8 columns">
+            <%= @scholarship.opening_date.strftime("%d %B %Y") %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="small-4 columns">
+            <h4>Batas Waktu</h4>
+          </div>
+
+          <div class="small-8 columns">
+            <%= show_deadline(@scholarship.closing_date) %>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-6 columns">
+        <div class="row">
+          <div class="small-4 columns">
+            <h4>Kategori</h4>
+          </div>
+
+          <div class="small-8 columns">
+            <%= @scholarship.category %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="small-4 columns">
+            <h4>Jenjang</h4>
+          </div>
+
+          <div class="small-8 columns">
+            <%= @scholarship.major %></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scholarship-description">
+    <%= @scholarship.description.html_safe %>
+  </div>
+  <% if current_user %>
+    <ul class="inline-list">
+      <li><%= link_to "Edit", edit_scholarship_path(@scholarship) %></li>
+      <li><%= link_to 'Hapus', @scholarship, method: :delete, data: {confirm: "Are you sure?"}%></li>
+    </ul>
+  <% end %>
+</div>
