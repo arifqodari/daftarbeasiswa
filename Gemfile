@@ -43,8 +43,3 @@ gem 'foundation-rails'
 gem "font-awesome-rails"
 gem 'foundation-wysihtml5-rails'
 gem 'friendly_id', '~> 5.0.0'
-
-# gem 'capistrano', '~> 3.1.0'
-# gem 'capistrano-bundler', '~> 1.1.2'
-# gem 'capistrano-rails', '~> 1.1.1'
-gem 'mysql2', '~> 0.3.17'
