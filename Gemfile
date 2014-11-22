@@ -43,3 +43,4 @@ gem 'foundation-rails'
 gem "font-awesome-rails"
 gem 'foundation-wysihtml5-rails'
 gem 'friendly_id', '~> 5.0.0'
+gem 'shareable'
